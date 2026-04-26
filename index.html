@@ -134,8 +134,9 @@ body::after{content:'';position:fixed;inset:0;background:url("data:image/svg+xml
 .pr{padding:clamp(60px,8vw,130px) clamp(16px,5vw,60px);background:var(--cb-l);position:relative}
 .pr::before{content:'';position:absolute;top:0;left:0;width:100%;height:1px;background:linear-gradient(90deg,transparent,var(--cr),transparent);opacity:.2}
 .pr-in{max-width:1400px;margin:0 auto}
-.pr-gr{display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:14px}
-.pc{background:var(--cb-m);border:1px solid rgba(184,184,184,.03);border-radius:12px;padding:28px 22px;text-align:center;transition:all .4s var(--tr);position:relative;overflow:hidden}
+.pr-gr{display:flex;flex-wrap:wrap;gap:14px;justify-content:center}
+@media(max-width:1024px){.pr-gr{justify-content:center}}
+.pc{background:var(--cb-m);border:1px solid rgba(184,184,184,.03);border-radius:12px;padding:28px 22px;text-align:center;transition:all .4s var(--tr);position:relative;overflow:hidden;width:calc(25% - 12px);min-width:200px;flex-shrink:0}
 .pc::before{content:'';position:absolute;top:0;left:0;width:100%;height:3px;background:var(--cr);transform:scaleX(0);transform-origin:left;transition:transform .4s var(--tr)}
 .pc:hover::before{transform:scaleX(1)}
 .pc:hover{transform:translateY(-5px);border-color:rgba(200,16,46,.1);box-shadow:0 16px 44px rgba(0,0,0,.4)}
@@ -275,7 +276,8 @@ body::after{content:'';position:fixed;inset:0;background:url("data:image/svg+xml
   .ab-bd{right:2%;padding:12px 16px}
   .ab-bd .b{font-size:30px}
 
-  .pr-gr{grid-template-columns:1fr;max-width:360px;margin:0 auto}
+  .pr-gr{flex-direction:column;align-items:center}
+  .pc{width:100%;max-width:360px}
 
   .sp-gr{grid-template-columns:1fr}
 
@@ -372,7 +374,7 @@ body::after{content:'';position:fixed;inset:0;background:url("data:image/svg+xml
         <div class="ft"><div class="ft-d"></div><span>Originais & paralelas</span></div>
         <div class="ft"><div class="ft-d"></div><span>Melhor preço garantido</span></div>
         <div class="ft"><div class="ft-d"></div><span>Atendimento rápido</span></div>
-        <div class="ft"><div class="ft-d"></div><span>Filial em SC</span></div>
+        <div class="ft"><div class="ft-d"></div><span>Todas as marcas</span></div>
       </div>
     </div>
   </div>
@@ -431,7 +433,7 @@ body::after{content:'';position:fixed;inset:0;background:url("data:image/svg+xml
 <div class="ml">
   <div class="ml-in rv">
     <div class="ml-l">
-      <div class="ml-lg"><img src="ml-logo.png" alt="Logo Mercado Livre" style="width:38px;height:38px;object-fit:contain"></div>
+      <div class="ml-lg"><img src="LOGOMERCADOLIVRE.png" alt="Logo Mercado Livre" style="width:38px;height:38px;object-fit:contain"></div>
       <div class="ml-tx"><h3>Também no Mercado Livre</h3><p>Compre com segurança, parcele e receba em casa.</p></div>
     </div>
     <a href="https://www.mercadolivre.com.br/pagina/cc20240814154911" class="btn btn-ml" target="_blank" rel="noopener">Ver nossa loja →</a>
@@ -450,7 +452,6 @@ body::after{content:'';position:fixed;inset:0;background:url("data:image/svg+xml
         <div class="cc"><div class="cc-ic">📍</div><div class="cc-tx"><h4>Endereço</h4><p>Estrada da Ribeira (BR-476), 4410<br>Santa Terezinha, Colombo/PR<br>CEP: 83408-000</p></div></div>
         <div class="cc"><div class="cc-ic">📱</div><div class="cc-tx"><h4>WhatsApp / Telefone</h4><p><a href="https://wa.me/554136065387?text=Ol%C3%A1%2C%20preciso%20de%20uma%20pe%C3%A7a" target="_blank" rel="noopener">(41) 3606-5387</a><br><span style="color:var(--sm);font-size:11px;">Seg a Sex · 8h–18h | Sáb · 8h–12h</span></p></div></div>
         <div class="cc"><div class="cc-ic">📲</div><div class="cc-tx"><h4>Redes Sociais</h4><p><a href="https://instagram.com/casadaslatascolombo" target="_blank" rel="noopener">@casadaslatascolombo</a><br><a href="https://facebook.com/casadaslatascolombo" target="_blank" rel="noopener">Facebook /casadaslatascolombo</a></p></div></div>
-        <div class="cc"><div class="cc-ic">🏭</div><div class="cc-tx"><h4>Filial</h4><p>São José, Santa Catarina<br><span style="color:var(--sm);font-size:11px;">CNPJ: 09.550.791/0002-89</span></p></div></div>
       </div>
       <div class="mp rr">
         <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3601.5!2d-49.2255!3d-25.3753!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94dce4f1c5c5c5c5%3A0x0!2sEstrada+da+Ribeira+4410+Colombo+PR!5e0!3m2!1spt-BR!2sbr!4v1" allowfullscreen loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="Localização Casa das Latas Colombo"></iframe>
