@@ -30,7 +30,7 @@ body::after{content:'';position:fixed;inset:0;background:url("data:image/svg+xml
 .ld.h{opacity:0;visibility:hidden;pointer-events:none}
 .ld span{font-family:'Bebas Neue',sans-serif;font-size:13px;letter-spacing:7px;color:var(--fg);text-transform:uppercase}
 .ld-bar{width:160px;height:2px;background:var(--gr);border-radius:2px;overflow:hidden}
-.ld-fill{width:0;height:100%;background:var(--cr);animation:lf 1.5s var(--tr) forwards}
+.ld-fill{width:0;height:100%;background:var(--cr);animation:lf .4s var(--tr) forwards}
 @keyframes lf{to{width:100%}}
 
 /* HEADER */
@@ -38,7 +38,7 @@ body::after{content:'';position:fixed;inset:0;background:url("data:image/svg+xml
 .hd::before{content:'';position:absolute;inset:0;background:rgba(13,13,13,0);backdrop-filter:blur(0);transition:all .5s var(--tr);z-index:-1}
 .hd.s::before{background:rgba(13,13,13,.92);backdrop-filter:blur(20px);border-bottom:1px solid rgba(200,16,46,.06)}
 .br{display:flex;align-items:center;gap:11px}
-.br-m{width:46px;height:46px;display:flex;align-items:center;justify-content:center;transition:all .4s var(--tr);flex-shrink:0}
+.br-m{width:54px;height:54px;display:flex;align-items:center;justify-content:center;transition:all .4s var(--tr);flex-shrink:0}
 .br-m img{width:100%;height:100%;object-fit:contain}
 .br:hover .br-m{transform:scale(1.08)}
 .br-n{display:flex;flex-direction:column;line-height:1}
@@ -56,15 +56,14 @@ body::after{content:'';position:fixed;inset:0;background:url("data:image/svg+xml
 
 /* HERO */
 .hr{min-height:100vh;display:flex;align-items:center;position:relative;overflow:hidden}
-.hr-bg{position:absolute;inset:0;background:url('loja-aerea-1.jpg') center/cover no-repeat;filter:brightness(.22) contrast(1.1) saturate(.5);transform:scale(1.05);animation:hz 25s ease-in-out infinite alternate}
-@keyframes hz{to{transform:scale(1.16)}}
-.hr-ov{position:absolute;inset:0;background:linear-gradient(135deg,rgba(13,13,13,.93) 0%,rgba(13,13,13,.5) 45%,rgba(200,16,46,.05) 100%),linear-gradient(to top,var(--cb) 0%,transparent 32%)}
+.hr-bg{position:absolute;inset:0;background:url('loja-aerea-1.jpg') center/cover no-repeat;filter:brightness(.3) contrast(1.1) saturate(.6);transform:scale(1.05)}
+.hr-ov{position:absolute;inset:0;background:linear-gradient(135deg,rgba(13,13,13,.85) 0%,rgba(13,13,13,.4) 45%,rgba(200,16,46,.05) 100%),linear-gradient(to top,var(--cb) 0%,transparent 25%)}
 .hr-ln{position:absolute;inset:0;overflow:hidden;opacity:.03}
 .hr-ln span{position:absolute;width:1px;height:100%;background:linear-gradient(to bottom,transparent,var(--st),transparent);animation:lnf 8s ease-in-out infinite}
 .hr-ln span:nth-child(1){left:12%}.hr-ln span:nth-child(2){left:30%;animation-delay:2s}.hr-ln span:nth-child(3){left:52%;animation-delay:4s}.hr-ln span:nth-child(4){left:73%;animation-delay:1s}.hr-ln span:nth-child(5){left:91%;animation-delay:3s}
 @keyframes lnf{0%,100%{opacity:.3}50%{opacity:1}}
-.hr-c{position:relative;z-index:2;max-width:1400px;margin:0 auto;padding:120px clamp(20px,5vw,60px) 80px;width:100%;display:grid;grid-template-columns:1.1fr .9fr;gap:56px;align-items:center}
-.hr-t{animation:ru 1s var(--tr) 1.7s both}
+.hr-c{position:relative;z-index:2;max-width:1400px;margin:0 auto;padding:160px clamp(20px,5vw,60px) 100px;width:100%;display:flex;flex-direction:column;align-items:center;text-align:center}
+.hr-t{animation:ru .8s var(--tr) .3s both;display:flex;flex-direction:column;align-items:center}
 @keyframes ru{from{opacity:0;transform:translateY(45px)}to{opacity:1;transform:translateY(0)}}
 .hr-tag{display:inline-flex;align-items:center;gap:10px;margin-bottom:22px}
 .hr-tag-l{width:34px;height:1px;background:var(--cr)}
@@ -72,8 +71,8 @@ body::after{content:'';position:fixed;inset:0;background:url("data:image/svg+xml
 .hr h1{font-family:'Bebas Neue',sans-serif;font-size:clamp(44px,6vw,82px);line-height:.93;color:var(--pr);margin-bottom:22px}
 .hr h1 em{font-style:normal;color:var(--cr);position:relative}
 .hr h1 em::after{content:'';position:absolute;bottom:2px;left:0;width:100%;height:5px;background:var(--cr);opacity:.12;border-radius:3px}
-.hr-d{font-weight:300;font-size:clamp(14px,1.1vw,16px);line-height:1.85;color:var(--fg);max-width:440px;margin-bottom:32px}
-.hr-bt{display:flex;gap:12px;flex-wrap:wrap}
+.hr-d{font-weight:300;font-size:clamp(14px,1.1vw,17px);line-height:1.85;color:var(--fg);max-width:580px;margin-bottom:32px;text-align:center}
+.hr-bt{display:flex;gap:12px;flex-wrap:wrap;justify-content:center}
 .btn{display:inline-flex;align-items:center;gap:10px;font-family:'Archivo Narrow',sans-serif;font-weight:700;font-size:12px;letter-spacing:3px;text-transform:uppercase;padding:14px 30px;border:none;cursor:pointer;transition:all .4s var(--tr)}
 .btn-r{background:var(--cr);color:var(--pr);clip-path:polygon(4% 0%,100% 0%,96% 100%,0% 100%)}
 .btn-r:hover{background:var(--cr-gl);transform:translateY(-2px);box-shadow:0 12px 36px rgba(200,16,46,.3)}
@@ -235,8 +234,6 @@ body::after{content:'';position:fixed;inset:0;background:url("data:image/svg+xml
 
 /* ============ MOBILE ============ */
 @media(max-width:1024px){
-  .hr-c{grid-template-columns:1fr;gap:36px}
-  .hr-sc{max-width:480px;margin:0 auto}
   .ab-in{grid-template-columns:1fr;gap:32px}
   .ab-imgs{height:340px}
   .co-ly{grid-template-columns:1fr}
@@ -262,8 +259,6 @@ body::after{content:'';position:fixed;inset:0;background:url("data:image/svg+xml
   .hr-bt{flex-direction:column;align-items:stretch}
   .btn{justify-content:center}
   .btn-r,.btn-w{clip-path:none;border-radius:8px}
-  .sc-i:first-child{height:185px}
-  .sc-i:not(:first-child){height:130px}
 
   .ss-in{grid-template-columns:1fr 1fr;gap:0}
   .st::after{display:none}
@@ -310,14 +305,12 @@ body::after{content:'';position:fixed;inset:0;background:url("data:image/svg+xml
   .wf svg{width:22px;height:22px}
 }
 @media(max-width:480px){
-  .br-m{width:36px;height:36px}
+  .br-m{width:42px;height:42px}
   .br-n strong{font-size:16px;letter-spacing:2px}
   .br-n small{font-size:8px}
   .hr h1{font-size:38px}
   .st-v{font-size:28px}
   .ab-imgs{height:220px}
-  .sc-i:first-child{height:150px}
-  .sc-i:not(:first-child){height:100px}
 }
 </style>
 </head>
@@ -349,14 +342,6 @@ body::after{content:'';position:fixed;inset:0;background:url("data:image/svg+xml
           Faça seu Pedido
         </a>
         <a href="#produtos" class="btn btn-g">Nossos Produtos ↓</a>
-      </div>
-    </div>
-    <div class="hr-sc">
-      <div class="sc-ac"></div>
-      <div class="sc-gr">
-        <div class="sc-i"><img src="loja-aerea-1.jpg" alt="Vista aérea da loja Casa das Latas na BR-476 Colombo PR" loading="eager"><span class="sc-lb">Nossa Loja · BR-476</span></div>
-        <div class="sc-i"><img src="https://images.unsplash.com/photo-1619642751034-765dfdf7c58e?w=400&q=80" alt="Faróis automotivos novos" loading="eager"><span class="sc-lb">Faróis</span></div>
-        <div class="sc-i"><img src="https://images.unsplash.com/photo-1580273916550-e323be2ae537?w=400&q=80" alt="Peças de carroceria automotiva" loading="eager"><span class="sc-lb">Carroceria</span></div>
       </div>
     </div>
   </div>
@@ -446,7 +431,7 @@ body::after{content:'';position:fixed;inset:0;background:url("data:image/svg+xml
 <div class="ml">
   <div class="ml-in rv">
     <div class="ml-l">
-      <div class="ml-lg"><svg viewBox="0 0 36 36" fill="none"><path d="M18 3C9.716 3 3 9.716 3 18s6.716 15 15 15 15-6.716 15-15S26.284 3 18 3zm0 27.5c-6.904 0-12.5-5.596-12.5-12.5S11.096 5.5 18 5.5 30.5 11.096 30.5 18 24.904 30.5 18 30.5z" fill="#2D3277"/><path d="M18 8c-1.5 0-4.5 2-6 5s-1 6.5-1 6.5S13 22 18 22s7-2.5 7-2.5-.5-3.5-1-6.5S19.5 8 18 8z" fill="#2D3277"/><path d="M12 19.5s1.5 3 6 3 6-3 6-3" stroke="#2D3277" stroke-width="1.5" stroke-linecap="round"/></svg></div>
+      <div class="ml-lg"><img src="ml-logo.png" alt="Logo Mercado Livre" style="width:38px;height:38px;object-fit:contain"></div>
       <div class="ml-tx"><h3>Também no Mercado Livre</h3><p>Compre com segurança, parcele e receba em casa.</p></div>
     </div>
     <a href="https://www.mercadolivre.com.br/pagina/cc20240814154911" class="btn btn-ml" target="_blank" rel="noopener">Ver nossa loja →</a>
@@ -502,7 +487,7 @@ body::after{content:'';position:fixed;inset:0;background:url("data:image/svg+xml
 </a>
 
 <script>
-window.addEventListener('load',()=>{setTimeout(()=>document.getElementById('ld').classList.add('h'),1600)});
+window.addEventListener('load',()=>{setTimeout(()=>document.getElementById('ld').classList.add('h'),400)});
 const hd=document.getElementById('hd');
 window.addEventListener('scroll',()=>hd.classList.toggle('s',window.scrollY>40),{passive:true});
 const mt=document.getElementById('mt'),nv=document.getElementById('nv');
